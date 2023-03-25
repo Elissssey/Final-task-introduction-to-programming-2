@@ -10,3 +10,11 @@ class Program
         int N = int.Parse(Console.ReadLine());
         PrintNumbers(N);
     }
+static void PrintNumbers(int number)
+    {
+        if (number < 1) // базовый случай - если число меньше 1, то рекурсия завершается
+            return;
+        Console.Write(number + " ");
+        PrintNumbers(number-1); // рекурсивный вызов функции для числа на 1 меньше
+    }
+}
